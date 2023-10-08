@@ -31,7 +31,7 @@ export class AppModule {
       express.urlencoded({ extended: true }), // Optional: Enable URL-encoded body parsing middleware
     );
     app.use((req, res, next) => {
-      const allowedOrigins = ['http://localhost:5173']; // List of allowed origins
+      const allowedOrigins = ['https://shopxpress-advanced-filter.vercel.app']; // List of allowed origins
 
       if (allowedOrigins.includes(req.headers.origin)) {
         res.header('Access-Control-Allow-Origin', req.headers.origin); // Set the allowed origin dynamically
